@@ -27,4 +27,4 @@
         
     - Unity Inspector
         
-        <img src='resources/close' width='300px' align='center'>
+        <img src='resources/close.png' width='300px' align='center'>
