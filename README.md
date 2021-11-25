@@ -14,3 +14,5 @@
 🥕 [Unity 3D - 부모 오브젝트 구하기](https://github.com/o3o-ovo3/UnityMetaverse/blob/main/Parent.md)
 
 🥕 [Unity 3D - UI 닫기 버튼 만들기](https://github.com/o3o-ovo3/UnityMetaverse/blob/main/Close.md)
+
+🥕 [Unity 3D - 사용자 입력을 받아 오브젝트 움직이기](https://github.com/o3o-ovo3/UnityMetaverse/blob/main/MoveObject.md)
