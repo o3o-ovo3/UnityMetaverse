@@ -18,3 +18,5 @@
 🥕 [Unity 3D - 사용자 입력을 받아 오브젝트 움직이기](https://github.com/o3o-ovo3/UnityMetaverse/blob/main/MoveObject.md)
 
 🥕 [Unity 3D - 지정된 영역에 도달하면 씬 전환하기](https://github.com/o3o-ovo3/UnityMetaverse/blob/main/SceneManager.cs)
+
+🥕 [Unity 3D - 씬 전환 시 특정 GameObject (Player) 도 함께 이동](https://github.com/o3o-ovo3/UnityMetaverse/blob/main/DontDestroy.md)
