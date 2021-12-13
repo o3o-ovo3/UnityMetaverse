@@ -7,7 +7,7 @@
         - 다시 되돌아갈 경우 새로 GameObject가 또 생성되어 같은 Object가 두개 발생
         
 
-    ex) 화면 전환 스크립트 -> [전체 코드](./DontDestroy.cs)
+    ex) 화면 전환 스크립트 -> [전체 코드](./CreatAvatar.cs)
 
     ```csharp
     public void SceneChange()
