@@ -14,7 +14,7 @@ public class CreateAvatar : MonoBehaviour
     public string prevScene;
     public string thisScene;
 
-    // Start is called before the first frame update
+    /*
     void Awake()
     {
         //다른 스크립트 파일의 변수 접근 법
@@ -41,19 +41,38 @@ public class CreateAvatar : MonoBehaviour
             Debug.Log("남자 캐릭터를 가린다");
             avatar.SetActive(true);
         }
-    }
 
+    }*/
+    
     void Update(){
         // 씬 전환
         string newScene = SceneManager.GetActiveScene().name;
 
         if(thisScene != newScene){
             prevScene = thisScene;
-            thisScene = newScene;   
+            thisScene = newScene;
+         
             if(prevScene == "Apartment" && thisScene == "MainScene")
             {
-                GameObject target = GameObject.Find("TargetPosition");
+                GameObject target = GameObject.Find("TargetPosition1");
                 this.transform.position = target.transform.position;
+            }
+            else if(prevScene == "40Apartment" && thisScene == "MainScene")
+            {
+                GameObject target = GameObject.Find("TargetPosition2");
+                this.transform.position = target.transform.position;
+            }
+            /*
+            else if(prevScene == "LoginScene" && thisScene == "MainScene"){
+                GameObject target = GameObject.Find("StartPoint");
+                this.transform.position = target.transform.position;
+            }
+            */
+            else {
+                if(thisScene != "LoginScene"){
+                    GameObject target = GameObject.Find("StartPoint");
+                    this.transform.position = target.transform.position;
+                }
             }
         }
     }
