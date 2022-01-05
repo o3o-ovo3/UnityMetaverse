@@ -22,3 +22,5 @@
 🥕 [Unity 3D - 지정된 영역에 도달하면 씬 전환하기](https://github.com/o3o-ovo3/UnityMetaverse/blob/main/SceneManager.cs)
 
 🥕 [Unity 3D - 씬 전환 시 특정 GameObject (Player) 도 함께 이동](https://github.com/o3o-ovo3/UnityMetaverse/blob/main/DontDestroy.md)
+
+🥕 [Unity 3D - UI Canvas가 겹치지 않게 하기 (GameObject.Find 또는 gameObject.activeSelf 이용)](https://github.com/o3o-ovo3/UnityMetaverse/blob/main/TvOnClick.cs)
