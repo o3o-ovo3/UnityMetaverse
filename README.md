@@ -30,3 +30,5 @@
 🥕 [Unity 3D - 씬 전환 후 원하는 위치에 Player 놓기](https://github.com/o3o-ovo3/UnityMetaverse/blob/main/TargetPosition.md)
 
 🥕 [Unity 3D - 특정 오브젝트를 클릭하면 UI창 띄우기](https://github.com/o3o-ovo3/UnityMetaverse/blob/main/OnMouseDown.cs)
+
+🥕 [Unity 3D - 레이저 포인터 만들기](https://github.com/o3o-ovo3/UnityMetaverse/blob/main/LaserPointer.cs)
