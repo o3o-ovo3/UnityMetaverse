@@ -1,5 +1,5 @@
-// 레이저 포인터 만들기
-// Pointer, Laser, Dot 필요
+// 기존 방식 -> 포인터 (몸체)가 마우스를 따라다니게 한다. --> 초점이 안맞고 마우스 움직임과 차이가 있음
+// 새로운 방식 -> 마우스가 있는 지점에 레이캐스트를 쏜다. --> 이 지점은 ScreenToPoint로 표현한다.
 
 using System.Collections;
 using System.Collections.Generic;
@@ -7,59 +7,39 @@ using UnityEngine;
 
 public class LaserPointer : MonoBehaviour
 {
-    private LineRenderer lr;
-    private float speed = 3f;
+    private Camera MainCamera;
 
-    public GameObject laser;
-    public GameObject dot;
+    public GameObject laser; // 레이저
+    private LineRenderer lr; // 레이저의 라인렌더러 컴포넌트
+    public GameObject dot; // 레이저가 다은 지점 표현
 
-    float mx;
-    float my;
-    // public GameObject point;
-
-    // Start is called before the first frame update
     void Start()
     {
-        dot.SetActive(false);
         lr = laser.GetComponent<LineRenderer>();    
         lr.SetPosition(0, lr.transform.position);
-        // point.SetActive(false);
+        MainCamera = Camera.main;
     }
 
-    // Update is called once per frame
     void Update()
     {
         lr.enabled = false;
         dot.SetActive(false);
 
-        // lr.SetPosition(0, transform.position+ new Vector3(0, 0.5f, 0));
-        lr.SetPosition(0, lr.transform.position);
         RaycastHit hit;
-        if(Physics.Raycast(transform.position, transform.forward, out hit))
+        Ray ray = MainCamera.ScreenPointToRay(Input.mousePosition); // 마우스 방향으로 레이를 쏜다
+        if(Physics.Raycast(ray, out hit, 1000.0f))
         {
             if(hit.collider.tag == "UI")
             {
-                lr.enabled = true;
+                transform.LookAt(hit.point); // 마우스가 가리키는 곳을 향해 몸체가 움직일 수 있도록 한다.
                 lr.SetPosition(1, hit.point); // index 1 -> 꼬리
-                dot.SetActive(true);
+                lr.enabled = true; // 레이저 나오게
+                dot.SetActive(true); // 닿은 점이 보이게
 
                 // dot의 위치는 포인터의 끝점 (닿은 곳)
                 dot.transform.position = hit.point;
-                // dot를 부딪힌 오브젝트가 바라보고 있는 방향으로 회전
-                // Vector3 dir = hit.collider.transform.position - dot.transform.position;
-                Vector3 dir = hit.collider.gameObject.transform.forward;
-                dir.y = 0f;
-                Quaternion rot = Quaternion.LookRotation(dir.normalized);
-                dot.transform.rotation = rot;
-                
-
-                // 2번
-                // dot.transform.localEulerAngles = new Vector3(0, hit.collider.transform.localEulerAngles.y, 0);
             }
         }
         else lr.SetPosition(1, transform.forward*500);
-
-        transform.Rotate(0f, Input.GetAxis("Mouse X") * speed, 0f, Space.World);
-        transform.Rotate(-Input.GetAxis("Mouse Y") * speed, 0f, 0f, Space.World);
     }
 }
