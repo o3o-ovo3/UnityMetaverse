@@ -34,3 +34,5 @@
 🥕 [Unity 3D - 레이저 포인터 만들기](https://github.com/o3o-ovo3/UnityMetaverse/blob/main/LaserPointer.cs)
 
 🥕 [Unity 3D - Raycast 사용 시 특정 컴포넌트 통과하기 (Trigger Ignore)](https://github.com/o3o-ovo3/UnityMetaverse/blob/main/RaycastIgnore.cs)
+
+🥕 [Unity 3D - y축은 고정한 채로 타겟 오브젝트 바라보기 (LookAt 사용)](https://github.com/o3o-ovo3/UnityMetaverse/blob/main/LookAt.cs)
