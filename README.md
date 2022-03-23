@@ -39,4 +39,5 @@
 
 🥕 [Unity 3D - y축은 고정한 채로 타겟 오브젝트 바라보기 (LookAt 사용)](https://github.com/o3o-ovo3/UnityMetaverse/blob/main/LookAt.cs)
 
+🥕 [Unity 3D - 오브젝트 간 거리를 계산하는 방법 3가지](https://github.com/o3o-ovo3/UnityMetaverse/blob/main/ObjectDistance.cs)
 
