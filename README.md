@@ -41,3 +41,4 @@
 
 🥕 [Unity 3D - 오브젝트 간 거리를 계산하는 방법 3가지](https://github.com/o3o-ovo3/UnityMetaverse/blob/main/ObjectDistance.cs)
 
+🥕 [Unity 3D - GetChild 메소드를 사용하지 않고 자식 전부 가져오기](https://github.com/o3o-ovo3/UnityMetaverse/blob/main/NotGetChild.cs)
